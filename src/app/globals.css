@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505; /* Deeper pitch-black background for modern OLED feel */
+  --foreground: #fcfcfc;
+  
+  --card: #121214; /* Slightly elevated card */
+  --card-foreground: #fafafa;
+  
+  --primary: #2563eb; /* Deep primary blue */
+  --primary-foreground: #ffffff;
+  
+  --muted: #1f1f22;
+  --muted-foreground: #a1a1aa;
+  
+  --border: #27272a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Premium Shadow Utilities */
+  --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.15);
+  --shadow-glow-hover: 0 0 30px rgba(37, 99, 235, 0.3);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(circle at 50% -20%, rgba(37, 99, 235, 0.1), transparent 60%);
+  background-attachment: fixed;
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
